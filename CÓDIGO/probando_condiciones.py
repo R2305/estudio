@@ -14,7 +14,7 @@ while True:
     
     
 while True:
-    permiso = input("¿Tienes permiso de tus padres?, 'si' o 'no'")
+    permiso = input("¿Tienes permiso de tus padres?, 'si' o 'no':")
     if permiso == 'si' or permiso== 'no':
         permiso_padres= (permiso == 'si')
         break
