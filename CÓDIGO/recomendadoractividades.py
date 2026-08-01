@@ -7,18 +7,41 @@
 • Hora: Puede ser “mañana”, “tarde” o “noche”.
 • Estado_animo: Puede ser “activo” o “relajado”."""
 
-clima =['soleado','lluvioso','nublado']
-hora= ['mañana', 'tarde', 'noche']
-estado_animo = ['activo', 'relajado']
-eleccion_clima= int(input("escribe:"))
-eleccion_hora= int(input())
-eleccion_animo= int(input())
-a= clima[eleccion_clima]
-b= hora[eleccion_hora]
-c= estado_animo[eleccion_animo]
+c =['soleado','lluvioso','nublado'] #c = clima 
+h= ['mañana', 'tarde', 'noche'] # h = hora
+ea = ['activo', 'relajado'] # ea = estado_animo
 
-estado_animo= eleccion_animo
+clima= int(input("""elige una opcion: 
+                 0.soleado
+                 1.lluvioso
+                 2.nublado\n"""))
+hora= int(input("""elige una opcion:
+                 0.mañana
+                 1.tarde
+                 2.noche\n"""))
+animo= int(input("""elige una opcion:
+                 0.activo
+                 1.relajado\n"""))
 
 
-if (eleccion_clima== 0 or eleccion_clima == 2) and eleccion_animo == 0:
+
+opcion_impresa= False
+
+
+if (clima== 0 or clima == 2) and animo == 0 and hora !=2:
     print(' haz ejercicio')
+    opcion_impresa = True
+
+if (clima == 1 or clima == 2) and animo !=0:
+    print('lee un libro')
+    opcion_impresa = True
+
+if (hora == 2 and animo ==0) and clima == 2:
+    print('escucha musica animada')
+    opcion_impresa = True
+if hora ==2 and animo ==1:
+    print('meditar')
+    opcion_impresa = True
+
+if not opcion_impresa:
+    print('ve una pelicula o una serie')
