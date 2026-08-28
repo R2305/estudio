@@ -6,6 +6,9 @@ else:
     print("El ciclo for ha terminado")
 
 
+for j in range (0,7,2):
+    print(f"la sucesión númerica es la siguiente:{j}")
+
 lista = []
 limite = 3
 print (f"ingresa los elementos en la lista, ten en cuenta que el limite es {limite}")
